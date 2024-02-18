@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #33373a;
+    /* background-image: url('images/BackgroundPhoto.jpg');
+    background-blend-mode: overlay; */
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #262a2b;
+    color: #fff;
+    padding: 10px;
+}
+
+.logo {
+    margin-left: 80px; 
+    margin-right: 50px;
+}
+
+.logo img {
+    width:180px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: auto; 
+    font-weight: bold;
+}
+nav a {
+    text-decoration: none; 
+    color: #fff;
+    margin: 0 20px;
+    position: relative; 
+}
+
+nav a::after {
+    content: ''; 
+    position: absolute; 
+    bottom: -2px; 
+    left: 0;
+    width: 100%; 
+    height: 2px; 
+    background-color: transparent; 
+    transition: width 0.3s, background-color 0.3s; 
+}
+
+nav a:hover {
+    color: #017754; 
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%; 
+    background-color: #fff; 
+}
+.active {
+    font-weight: bold;
+}
+/* About us... */
+.hero {
+    height: 200px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+ }
+
+.hero-content {
+    background-color: #33373a;
+    padding: 20px;
+    /* background-image: url('../images/Backgroundphoto.jpg');  
+    background-attachment: fixed;  */
+}
+
+.story {
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.signup-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-color: black;
+    margin-left: 1px;
+    cursor: pointer;
+    margin-right: 65px;
+    width: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #017754;
+    border-color: #017754;
+    color: #fff;
+}
+
+
+
+#FoodLabel,
+#DrinksLabel,
+#SaladDesertsLabel {
+    color: white;
+    margin: 110px 50px 20px 250px;
+    transition: color 0.3s; 
+    display: inline-block;
+    position: relative; 
+}
+
+#FoodLabel::after,
+#DrinksLabel::after,
+#SaladDesertsLabel::after {
+    content: ''; 
+    position: absolute; 
+    bottom: -2px; 
+    left: 0;
+    width: 100%; 
+    height: 2px; 
+    background-color: transparent; 
+    transition: width 0.3s, background-color 0.3s; 
+}
+
+#FoodLabel:hover,
+#DrinksLabel:hover,
+#SaladDesertsLabel:hover {
+    color: #017754; 
+    transition: 0.3s;
+
+}
+
+#FoodLabel:hover::after,
+#DrinksLabel:hover::after,
+#SaladDesertsLabel:hover::after {
+    width: 100%; 
+    background-color: #fff; 
+}
+
+.LineUnderFood {
+    background-color: white; 
+    width: 70%; 
+    height: 2px; 
+    margin: 20px 0; 
+    margin-left: 250px;
+    
+}  
+
+.SaladAndDesertsImages,
+.DrinksImages,
+.FoodImages {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px; /* Adjust margin as needed */
+}
+
+.SaladDeserts-item,
+.drink-item,
+.food-item {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    width: calc(25% - 40px); /* Arrange 3 items per row with space in between */
+}
+
+.SaladDeserts-item img,
+.drink-item img,
+.food-item img{
+    width: 150px;
+    border-radius: 80px;
+    border: solid black 3px;
+    border-width: 0.5px;
+}
+
+.SaladDeserts-item span,
+.drink-item span,
+.food-item span {
+    color: white;
+    font-family:cursive;
+    margin-left: 20px;   
+    
+}
+/* Adding Order Pop Up */
+.model {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Adding Order Pop Up */
+.model-content {
+    background-color: #262a2b; /* Match header background color */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #fff; /* White border */
+    width: 40%;
+    color: #fff; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff; /* Hover color */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#add-to-order-btn {
+    background-color: #017754; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+#add-to-order-btn:hover {
+    background-color: #01472b; /* Darker hover color */
+}
+
+/* Login Page Css */
+.signup{
+    width: 360px;
+    height: 800px;
+    margin: auto;
+    border-radius: 3px;
+    margin-top: -700px;
+    
+}
+.login{
+    width: 360px;
+    height: 800px;
+    margin: auto;
+    border-radius: 3px;
+    margin-top:-700px ;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+h4{
+    text-align: center;
+    padding: 15px;
+    color: white;
+    
+}
+form{
+    width: 300px;
+    margin: auto;
+    
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+
+}
+form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+    
+}
+input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #ff7322;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;    
+    text-align: center;
+
+}
+
+input[type="submit"]:hover{
+    color: white;
+    background: rgb(13, 211, 247);
+    
+}
+
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+    color: white;
+}
+p a{
+    color: black;
+}
+
+#loggedInUser {
+    font-weight: bold;
+    color: #f04;
+    margin: 10px;
+  }
